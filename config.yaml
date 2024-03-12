@@ -6,9 +6,9 @@ sample_directory: ""
 
 # Information about reference
 #############################
-reference: "/users/sedlazec/ccdg_tech/reference/GRCh38-2.1.0/genome.fa"
-bed_file: "/users/mmahmoud/home/projects/HiFi_panel/genes/2021_Gene_Pane_LR-GRCh38_challenging_mrg_genes_included_less_than_90percent_GIAB_v4_sorted.bed"
-exon_file: "/users/mmahmoud/home/projects/HiFi_panel/genes/2021_Gene_Pane_LR-GRCh38_challenging_mrg_genes_included_less_than_90percent_GIAB_v4_exones.bed"
+reference: "~/reference/GRCh38-2.1.0/genome.fa"
+bed_file: "~/genes/2021_Gene_Pane_LR-GRCh38_challenging_mrg_genes_included_less_than_90percent_GIAB_v4_sorted.bed"
+exon_file: "~/genes/2021_Gene_Pane_LR-GRCh38_challenging_mrg_genes_included_less_than_90percent_GIAB_v4_exones.bed"
 #############################
 
 # SNVs Configuration
@@ -16,7 +16,7 @@ exon_file: "/users/mmahmoud/home/projects/HiFi_panel/genes/2021_Gene_Pane_LR-GRC
 SNVs_dir_name: "SNVs"
 clair_threads: 5
 reads_technology: 'hifi'
-bed_region: "/users/mmahmoud/home/projects/HiFi_panel/genes/2021_Gene_Pane_LR-GRCh38_challenging_mrg_genes_included_less_than_90percent_GIAB_v4_stat.bed"
+bed_region: "~/genes/2021_Gene_Pane_LR-GRCh38_challenging_mrg_genes_included_less_than_90percent_GIAB_v4_stat.bed"
 af: 0.25
 ####################
 
@@ -36,16 +36,16 @@ buffer: 10000
 ################
 
 # SNVs
-# genes_dir: "/users/mmahmoud/home/projects/HiFi_panel/scripts/snakefiles/genes"
-genes_dir: "/users/mmahmoud/home/projects/HiFi_panel/scripts/snakefiles/genes_273"
+# genes_dir: "~/scripts/snakefiles/genes"
+genes_dir: "~/scripts/snakefiles/genes_273"
 # genes_dir: "/stornext/snfs4/next-gen/scratch/medhat/projects/infertile_man/genes/genes_bed"
 output_dir_name: "SNVs_benchmark_dir"
-# gold_vcf: "/users/mmahmoud/home/projects/HiFi_panel/scripts/snakefiles/SNVs_truthset/HG002_dipcall_original.SNV.decompose.vcf.gz"
-gold_vcf: "/users/mmahmoud/home/projects/HiFi_panel_scripts/truthset/HG002_GRCh38_CMRG_smallvar_v1.00.vcf.gz"
-#gold_vcf: "/users/mmahmoud/home/projects/HiFi_panel/truthset/NA12878/SNVs/HG001_GRCh38_1_22_v4.2.1_benchmark_CMRG.vcf.gz"
-gold_variant_bed: "/users/mmahmoud/home/projects/HiFi_panel_scripts/truthset/HG002_GRCh38_CMRG_smallvar_v1.00_variants.bed" # This is the same as above but converted to bed, used in calculating coverage, rule: VariantCoverage
+# gold_vcf: "~/scripts/snakefiles/SNVs_truthset/HG002_dipcall_original.SNV.decompose.vcf.gz"
+gold_vcf: "~_scripts/truthset/HG002_GRCh38_CMRG_smallvar_v1.00.vcf.gz"
+#gold_vcf: "~/truthset/NA12878/SNVs/HG001_GRCh38_1_22_v4.2.1_benchmark_CMRG.vcf.gz"
+gold_variant_bed: "~/scripts/truthset/HG002_GRCh38_CMRG_smallvar_v1.00_variants.bed" # This is the same as above but converted to bed, used in calculating coverage, rule: VariantCoverage
 REF_38: "/users/sedlazec/ccdg_tech/reference/GRCh38-2.1.0/genome_mainchrs.sdf"
-genes_without_benchmark: "/users/mmahmoud/home/projects/HiFi_panel/genes/genes_without_benchmark.tsv"
+genes_without_benchmark: "~/genes/genes_without_benchmark.tsv"
 SNVs_bench_threads: 5
 SNVs_min_quality: 0
 SNVs_split_file_name: "SNVs_bench_split"
@@ -54,8 +54,8 @@ extra_rtg: "" #"--squash-ploidy"
 samples_to_compare: "--sample HG002,HG002"
 
 # SVs
-GOLD_SV: "/users/mmahmoud/home/projects/medical_region/truth_set/NA24385/SVs_medical/HG002_GRCh38_difficult_medical_gene_SV_benchmark_v0.01.vcf.gz"
-BED_SV: "/users/mmahmoud/home/projects/medical_region/truth_set/NA24385/SVs_medical/HG002_GRCh38_difficult_medical_gene_SV_benchmark_v0.01.bed"
+GOLD_SV: "~/home/projects/medical_region/truth_set/NA24385/SVs_medical/HG002_GRCh38_difficult_medical_gene_SV_benchmark_v0.01.vcf.gz"
+BED_SV: "~/home/projects/medical_region/truth_set/NA24385/SVs_medical/HG002_GRCh38_difficult_medical_gene_SV_benchmark_v0.01.bed"
 SV_OUT_DIR: "sv_benchmark"
 extra: "--passonly  --pctsim=0 --multimatch" # do not use --giabreport it raise errors
 
